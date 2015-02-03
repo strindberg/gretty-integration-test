@@ -1,0 +1,4 @@
+rootProject.name = 'GrettyIntTest'
+
+include ':web'
+include ':integrationTest'

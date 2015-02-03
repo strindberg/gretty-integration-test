@@ -1,0 +1,16 @@
+allprojects {
+
+    buildscript {
+        repositories {
+            jcenter()
+        }
+    }
+
+    group = 'se.jh'
+    version = '1.5.3'
+
+    repositories {
+        jcenter()
+    }
+
+}

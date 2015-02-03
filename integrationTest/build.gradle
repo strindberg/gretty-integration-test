@@ -1,0 +1,23 @@
+apply plugin: 'groovy'
+
+buildscript {
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:1.1.8'
+    }
+}
+
+apply plugin: 'org.akhikhl.gretty'
+
+gretty {
+    contextPath = '/'
+}
+
+farm {
+    webapp ":web"
+    webapp project
+    integrationTestTask = 'webIntegrationTest'
+}
+
+task webIntegrationTest << {
+    logger.quiet "startingIntegrationTest"
+}
